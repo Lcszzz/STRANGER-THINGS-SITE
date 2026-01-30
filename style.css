@@ -1,0 +1,535 @@
+*{
+    /*padrão para todos os trabalhos com css*/
+
+    margin: 0; /*define a margem externa de um elemento, ou seja, o espaço entre o elemento e os outros elementos ao seu redor*/
+    padding: 0; /*define o espaçamento interno de um elemento, ou seja, o espaço entre o conteúdo do elemento e sua borda*/
+    box-sizing: border-box; /*altera o modelo de caixa padrão do CSS para incluir o padding e a borda dentro da largura e altura totais do elemento*/
+}
+
+@font-face {
+    font-family: "Benguiat Bold";
+    src: url(fontes/Benguiat\ Bold.ttf);
+}
+
+html, body{
+    overflow-x: hidden !important;
+}
+
+section{
+    width: 100%; /*define a largura da seção como 100% da largura da tela*/
+    display: flex; /*define o layout da seção como flexível*/
+    padding: 7vw;
+}
+
+ 
+
+
+body {
+    background-color: #0C0102;/*cor de fundo da pagina*/
+    color: rgba(255, 255, 255, 0.9); /*cor do texto da pagina*/
+    font-family: 'Poppins', sans-serif;/*define a fonte do texto*/
+
+}
+
+
+
+ul{
+    list-style: none; /*remove os marcadores padrão das listas não ordenadas*/
+
+}
+
+.bgmonstro{
+
+    background-image: url(imgs/bg-sec2.webp);
+    background-size: cover;
+    background-position: center;
+
+  
+}
+
+button{
+    font-family: poppins, sans-serif; /*define a fonte do texto dos botões*/
+}
+
+header {
+    width: 100%; 
+    display: flex; 
+    justify-content: space-between; /*alinha os itens do cabeçalho com espaço entre eles*/
+    padding: 4vw; 
+    position: absolute; /*define a posição do cabeçalho como absoluta em relação ao seu contêiner pai*/
+    z-index: 9; /*define a ordem de empilhamento do cabeçalho em relação a outros elementos na página*/ 
+
+}
+
+.hero {
+
+
+    background-image: url(imgs/hero.webp);
+    width: 100%;
+    height: 100vh; /*define a altura da seção como 100% da altura da janela de visualização*/
+    background-size: cover; /*faz com que a imagem de fundo cubra toda a área da seção*/
+    background-position: center; /*centraliza a imagem de fundo na seção*/
+    display: flex;
+    align-items: center; /*alinha verticalmente o conteúdo da seção ao centro*/
+    justify-content: space-between;
+    padding: 0 7vw 7vw 7vw ; /*adiciona um espaçamento interno à esquerda e à direita do conteúdo da seção*/
+
+
+.esquerda{
+    position: relative; /*define a posição da div esquerda como relativa ao seu contêiner pai*/
+    top: -90px; /*move a div esquerda 60 pixels para cima*/
+    width: 30%; 
+    
+
+    h3{
+        font-size: 20px; /*define o tamanho da fonte do h3*/
+        letter-spacing: 16px; /*define o espaçamento entre as letras do h3*/
+        font-weight: 500; /*define a espessura da fonte do h3*/
+        text-transform: uppercase; /*transforma o texto do h3 em maiúsculas*/
+        
+    }
+
+    h1{
+       
+        font-size: 3.7vw; 
+        margin-top: 16px; /*adiciona uma margem superior ao h1*/
+        line-height: 1.2; /*define a altura da linha do h1*/
+        font-weight: 700;   
+        font-family: "Benguiat Bold"; /*define a fonte do h1*/
+    }
+
+    
+
+    p{
+        font-size: 16px; 
+        margin-bottom: 24px; /*adiciona uma margem inferior ao parágrafo*/
+        line-height: 1.5; 
+        }
+
+    }
+
+    .direita{
+        display: flex;
+        flex-direction: column;/*alinha os itens da div direita em uma coluna*/
+        align-items: end; 
+        width: 30%;
+        text-align: end; /*alinha o texto da div direita à direita*/
+        position: relative;
+        top: -90px;
+        p{
+            font-size: 1.6vw;
+        }
+        button{
+            background-color: transparent;
+            color: white;
+            font-size: 24px;
+            display: flex;
+            gap: 12px; /*adiciona um espaçamento entre o texto e a imagem do botão*/
+            border: none;
+            outline: none; /*remove a borda padrão do botão*/
+            padding: 16px 0px;
+            border-bottom: 1px solid white; /*adiciona uma borda inferior ao botão*/
+            cursor: pointer; /*altera o cursor para indicar que o botão é clicável*/
+            transition: all 0.3s ease; /*adiciona uma transição suave para todas as propriedades do botão*/
+
+        }
+
+
+}
+
+}
+
+
+.secaoCidades{
+    flex-direction: column;
+
+   .titulo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 48px;
+    
+    h2{
+        font-size: 48px;
+        font-weight: 350;
+
+    }
+   }
+
+   button{
+            background-color: transparent;
+            color: white;
+            font-size: 20px;
+            display: flex;
+            gap: 12px; /*adiciona um espaçamento entre o texto e a imagem do botão*/
+            border: none;
+            outline: none; /*remove a borda padrão do botão*/
+            padding: 24px 0px;
+            border-bottom: 1px solid white; 
+            cursor: pointer; /*altera o cursor para indicar que o botão é clicável*/
+            transition: all 0.3s ease; /*adiciona uma transição suave para todas as propriedades do botão*/
+
+        }
+
+        .cards {
+            margin-top: 52px;
+            display: flex;
+            justify-content: space-between;
+            
+            .card {
+            display: flex;
+            justify-content: space-between;
+            background-image: url(imgs/card1.webp);
+            aspect-ratio: 16/9; /*define a proporção da largura para a altura do cartão*/
+            background-size: cover;
+            width: 32%;
+            background-position: center;
+            align-items: end;
+            padding: 20px;
+            border-radius: 8px; /*arredonda os cantos do cartão*/
+            cursor: pointer;
+            
+
+            }
+
+            .card:nth-child(2) /*seleciona o segundo cartão*/
+            {
+                background-image: url(imgs/card2.webp);
+            }
+            
+            .card:nth-child(3)  /*seleciona o terceiro cartão*/
+            {
+                background-image: url(imgs/card3.webp);
+            }
+             
+
+
+        }
+}
+
+.secaoreviews {
+    flex-direction: column;
+    
+
+    .logotipos {
+
+        display: flex;
+        justify-content: space-between;
+        gap: 48px; /*adiciona um espaçamento entre os logotipos*/
+        margin-bottom: 70px;
+            
+     }
+}
+
+.comentarios {
+    display: flex;
+    gap: 60px; /*adiciona um espaçamento entre os depoimentos*/
+    justify-content: space-between;
+
+    .depoimento {
+        width: 33%;
+        font-size: 22px;
+        line-height: 1.5;
+        justify-content: space-between;
+    }
+}
+
+.obrigado {
+    
+   flex-direction: column;
+   align-items: center;
+border-top: 1px solid rgba(255, 255, 255, 0.2); /*adiciona uma borda superior à seção de agradecimento*/
+   
+h2{
+    font-size: 48px;
+        font-weight: 350;
+}
+ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 48px;
+    font-size: 24px;
+}
+}
+
+footer {
+    
+    border-top: 1px solid rgba(255, 255, 255, 0.2); /*adiciona uma borda superior à seção de rodapé*/
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url(imgs/bg-footer.webp);
+    background-position: center;
+    background-size: cover;
+
+    h3{
+        font-size: 16px;
+        margin-bottom: 16px;
+        font-weight: 500;
+    }
+
+
+    .conteudofooter {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        padding: 7VW;
+    }
+
+    .logofooter {
+        
+        h3{
+        font-size: 20px;
+        letter-spacing: 16px; 
+        font-weight: 500; 
+        text-transform: uppercase; 
+        
+    }
+
+    h2{
+       
+        font-size: 3.7vw; 
+        margin-top: 16px;
+        line-height: 1.2; 
+        font-weight: 700;   
+        font-family: "Benguiat Bold";
+    }
+    
+
+    }
+
+    .secoesfooter {
+        display: flex;
+        flex: 1; /*faz com que a seção ocupe o espaço disponível restante*/
+        justify-content: end;
+        gap: 80px; /*adiciona um espaçamento entre as seções do rodapé*/
+
+.social {
+         ul{
+           display: flex;
+           gap: 20px; 
+           padding-top: 16px; /*adiciona um espaçamento superior à lista de redes sociais*/
+         }
+}
+
+
+    }
+
+    .logotiposfooter {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 4vw  ;
+
+}
+
+.textoinfinito {
+    display: flex;
+    width: max-content;
+
+    h3{
+        color: rgb(155, 155, 155);
+        font-size: 12vw;
+        font-family: "Benguiat Bold", sans-serif;
+        mix-blend-mode: color-dodge; /*define o modo de mistura do texto*/
+        animation: TextoInfinito 20s linear infinite; /*aplica a animação TextoInfinito ao h3*/
+        padding-left: 8vw;
+
+    }
+}
+}
+
+
+
+@media (max-width:600px){
+
+   
+
+    header{
+        display: flex;
+        justify-content: space-between;
+        
+
+    }
+
+
+.hero{
+    flex-direction: column;
+    padding: 40% 4vw 0;
+    
+
+    .esquerda,.direita{
+
+        width: 100%;
+
+    }
+
+    .esquerda{
+        h3,h1 {
+            text-align: center;
+        }
+
+        h1{
+        font-size: 12vw;
+    }
+
+    }
+
+    .direita{
+        align-items: start;
+        p{
+            font-size: 5.5vw;
+            text-align: start;
+            margin-bottom: 16px;
+
+             
+        }
+    }
+
+     
+}
+
+.secaoCidades{
+   .secaoCidades{
+    padding-left: 4vw;
+    padding-right: 4vw;
+  }
+
+  .secaoCidades .cards{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: stretch;   /* faz os cards esticarem na coluna */
+  }
+
+  .secaoCidades .cards .card{
+    width: 100%;
+    flex: 0 0 auto;         /* evita travas de flex-basis */
+    max-width: none;
+  }
+
+  button{
+    display: none;
+  }
+
+}
+
+
+@media (max-width: 600px){
+  .secaoCidades{
+    padding-left: 4vw;
+    padding-right: 4vw;
+  }
+
+  .secaoCidades .cards{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: stretch;   /* faz os cards esticarem na coluna */
+  }
+
+  .secaoCidades .cards .card{
+    width: 100%;
+    flex: 0 0 auto;         /* evita travas de flex-basis */
+    max-width: none;
+  }
+}
+
+/* logos no topo: quebra e centraliza */
+  .secaoreviews .logotipos{
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+    margin-bottom: 32px;
+  }
+
+  /* depoimentos: vira 1 coluna e não estica */
+  .comentarios{
+    flex-direction: column;
+    gap: 24px;
+    align-items: stretch;
+  }
+
+  .comentarios .depoimento{
+    width: 100%;
+    font-size: 18px;       /* menor que 22px */
+    line-height: 1.4;
+    max-height: 220px;     /* limita a altura pra não virar "colunão" */
+    overflow: hidden;      /* esconde o excesso */
+  }
+.obrigado h2{
+    font-size: 8vw;
+    line-height: 1.15;
+    text-align: center;
+  }
+
+  .obrigado ul{
+    padding: 24px 4vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;  /* 2 colunas */
+    gap: 12px 24px;                  /* linha / coluna */
+    justify-content: initial;        /* mata o space-between */
+  }
+
+  .obrigado li{
+    font-size: 18px;
+    white-space: nowrap;             /* evita “Cidade do” quebrar feio */
+  }
+
+  footer{
+    padding-top: 32px;
+  }
+
+  footer .conteudofooter{
+    flex-direction: column;
+    align-items: center;
+    gap: 28px;
+    padding: 10vw 4vw;   /* substitui o 7vw que fica grande */
+    text-align: center;
+  }
+
+  footer .logofooter h2{
+    font-size: 12vw;     /* título responsivo */
+    line-height: 1.05;
+  }
+
+  footer .logofooter h3{
+    letter-spacing: 10px; /* reduz um pouco no mobile */
+  }
+
+  footer .secoesfooter{
+    width: 100%;
+    flex-direction: column; /* empilha “social / parceiro / institucional” */
+    align-items: center;
+    justify-content: center;
+    gap: 22px;
+  }
+
+  footer .secoesfooter .social ul{
+    justify-content: center;
+  }
+
+  footer .logotiposfooter{
+    flex-wrap: wrap;        /* logos de baixo quebram linha */
+    justify-content: space-between;
+    gap: 18px;
+    padding: 0 4vw 24px;
+  }
+
+  
+  
+}
+
+@keyframes TextoInfinito /*animação para o texto infinito*/ {
+    0% {
+        transform: translateX(100%);
+    }
+   
+
+    
+    
+
+    
+}

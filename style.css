@@ -43,6 +43,9 @@ ul{
     background-image: url(imgs/bg-sec2.webp);
     background-size: cover;
     background-position: center;
+    z-index: 2;
+    position: relative;
+    background-color: #0C0102;
 
   
 }
@@ -64,7 +67,7 @@ header {
 .hero {
 
 
-    background-image: url(imgs/hero.webp);
+    
     width: 100%;
     height: 100vh; /*define a altura da seção como 100% da altura da janela de visualização*/
     background-size: cover; /*faz com que a imagem de fundo cubra toda a área da seção*/
@@ -73,12 +76,50 @@ header {
     align-items: center; /*alinha verticalmente o conteúdo da seção ao centro*/
     justify-content: space-between;
     padding: 0 7vw 7vw 7vw ; /*adiciona um espaçamento interno à esquerda e à direita do conteúdo da seção*/
+    position: relative;
+    
+    .bg{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        object-fit: cover;
+     
+    }
+
+    picture{
+
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            
+        
+        
+        
+        
+
+        img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        position: relative;
+        }
+
+         
+    }
 
 
 .esquerda{
     position: relative; /*define a posição da div esquerda como relativa ao seu contêiner pai*/
     top: -90px; /*move a div esquerda 60 pixels para cima*/
     width: 30%; 
+    z-index: 3;
     
 
     h3{
@@ -116,6 +157,7 @@ header {
         text-align: end; /*alinha o texto da div direita à direita*/
         position: relative;
         top: -90px;
+        z-index: 3;
         p{
             font-size: 1.6vw;
         }
@@ -139,9 +181,23 @@ header {
 
 }
 
+.hero::before{
+    content: "";
+  background: linear-gradient(180deg, rgba(12, 1, 2, 0.00) 0%, #0C0102 100%);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  top: 0;
+  
+}
+
 
 .secaoCidades{
     flex-direction: column;
+    position: relative;
+    
 
    .titulo{
     display: flex;
@@ -239,6 +295,14 @@ header {
    flex-direction: column;
    align-items: center;
 border-top: 1px solid rgba(255, 255, 255, 0.2); /*adiciona uma borda superior à seção de agradecimento*/
+font-size: 20px;
+  text-align: center;
+  white-space: normal;         /* deixa quebrar */
+  overflow-wrap: anywhere;     /* evita colar/estourar */
+  word-break: normal;
+  z-index: 2;
+  position: relative;
+  background-color: #0C0102;
    
 h2{
     font-size: 48px;
@@ -246,7 +310,8 @@ h2{
 }
 ul {
     width: 100%;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
     justify-content: space-between;
     padding: 48px;
     font-size: 24px;
@@ -518,9 +583,31 @@ footer {
     padding: 0 4vw 24px;
   }
 
-  
-  
+ 
+
 }
+
+.secaoCidades .cards .card{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  gap: 6px;
+}
+
+.secaoCidades .cards .card h3{
+  font-size: 28px;      /* ajuste se quiser */
+  line-height: 1.1;
+  margin: 0;
+}
+
+.secaoCidades .cards .card p{
+  font-size: 14px;
+  margin: 0;
+  letter-spacing: 1px;
+  opacity: 0.95;
+}
+
 
 @keyframes TextoInfinito /*animação para o texto infinito*/ {
     0% {
